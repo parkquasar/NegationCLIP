@@ -1,0 +1,30 @@
+# === Core ===
+torch==2.7.1
+torchvision==0.22.1
+numpy==1.26.4
+pandas==2.2.1
+scikit-learn==1.4.1.post1
+tqdm==4.67.0
+Pillow==10.2.0
+
+# === Transformers / HuggingFace ===
+transformers==4.56.1
+accelerate==0.34.2
+huggingface-hub==0.34.4
+datasets==3.0.1
+tokenizers==0.22.0
+sentencepiece==0.1.99
+
+# === COCO / Vision ===
+pycocotools==2.0.7
+opencv-python==4.10.0.84
+albumentations==1.4.3
+
+# === Utilities ===
+ftfy==6.1.3
+regex==2024.9.11
+requests==2.32.3
+
+# === Optional (LLM inference stability) ===
+bitsandbytes==0.43.1
+safetensors==0.4.5
