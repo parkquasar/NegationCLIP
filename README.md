@@ -9,8 +9,7 @@
 - ✅ Preprint available on [arXiv](https://arxiv.org/abs/2501.10913)  
 - ✅ NegationCLIP checkpoints available on [Hugging Face](https://huggingface.co/jerryray/negationclip)  
 - ✅ Data generation & fine-tuning scripts included  
-- 🚧 Benchmarks and downstream applications (coming soon)  
-- 🗓️ Presentation at **ICCV 2025**, Honolulu, Hawaii  
+- ✅ NegRefCOCOg Benchmarks
 
 ---
 
@@ -53,8 +52,24 @@ python src/clip_finetune.py \
   --clip_model "ViT-B/32" \
 ```
 
-**Outputs**  
+**Outputs**
 - Best model automatically saved when validation loss improves.
+
+---
+
+## 🔍 Evaluation (NegRefCOCOg)
+
+Evaluate NegationCLIP on the NegRefCOCOg benchmark:
+
+```bash
+cd NegRefCOCOg
+python negrefcocog_eval.py \
+  --arch "ViT-B/16" \
+  --load_dir /path/to/checkpoint.pt \
+  --device "cuda:1" \
+  --annotation_file "NegRefCOCOg.json" \
+  --image_dir /path/to/coco_images/train2014
+```
 
 ---
 
@@ -67,6 +82,11 @@ negationclip/
 │   └── data_generation.py
 ├── annotations/
 │   └── negationclip_captions_train2014.json
+├── NegRefCOCOg/
+│   ├── negrefcocog_eval.py
+│   ├── refer.py
+│   ├── NegRefCOCOg.json
+│   └── external/
 ├── requirements.txt
 ├── environment.yml
 ├── README.md

@@ -248,7 +248,7 @@ def get_args() -> argparse.Namespace:
     """Parses and returns command-line arguments."""
     parser = argparse.ArgumentParser(description="Fine-tune CLIP text encoder on COCO Captions.")
     
-    parser.add_argument('--device', type=int, default=0, help='GPU device ID to use.')
+    parser.add_argument('--device', type=int, default=1, help='GPU device ID to use (default: 1).')
     parser.add_argument('--json_path', type=str, required=True, help='Path to the COCO-style JSON annotation file.')
     parser.add_argument('--image_dir', type=str, required=True, help='Path to the directory containing COCO images.')
     parser.add_argument('--output_dir', type=str, default='./checkpoints', help='Directory to save model checkpoints.')

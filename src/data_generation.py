@@ -248,7 +248,7 @@ def get_args() -> argparse.Namespace:
     """Parses and returns command-line arguments."""
     parser = argparse.ArgumentParser(description="Generate negated COCO captions using LLMs.")
     
-    parser.add_argument('--device', type=int, default=0, help='GPU device ID to use.')
+    parser.add_argument('--device', type=int, default=1, help='GPU device ID to use (default: 1).')
     parser.add_argument('--caption_path', type=str, required=True, help='Path to the COCO captions annotation file.')
     parser.add_argument('--image_dir', type=str, required=True, help='Path to the directory containing COCO images.')
     parser.add_argument('--output_dir', type=str, default='./annotations', help='Directory to save the output JSON file.')
